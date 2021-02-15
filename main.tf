@@ -4,12 +4,12 @@ resource "google_compute_target_instance" "default" {
 }
 
 data "google_compute_image" "vmimage" {
-  family  = "Windows Server 2019 Datacenter"
+  family  = "windows-2019"
   project = "windows-cloud"
 }
 
 resource "google_compute_instance" "target-vm" {
-  name         = "target-vm"
+  name         = "windows-vm"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
 
